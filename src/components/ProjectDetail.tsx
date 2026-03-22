@@ -147,16 +147,14 @@ export default function ProjectDetail({ project, onClose, isOpen }: { project: P
                 project.details.results.map((img, idx) => (
                   <div 
                     key={idx} 
-                    className="rounded-[24px] overflow-hidden bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 flex justify-center transition-all duration-500 cursor-pointer relative"
-                    onClick={() => setActiveImageIndex(idx)}
+                    className="rounded-[24px] overflow-hidden bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 flex justify-center transition-all duration-500 relative"
                   >
                     <img src={img} alt={`Result ${idx + 1}`} className="w-full max-w-4xl h-auto object-contain" />
                   </div>
                 ))
               ) : (
                 <div 
-                  className="rounded-[24px] overflow-hidden bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 flex justify-center transition-all duration-500 cursor-pointer relative"
-                  onClick={() => setActiveImageIndex(0)}
+                  className="rounded-[24px] overflow-hidden bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 flex justify-center transition-all duration-500 relative"
                 >
                   <img src={project.image} alt="Result" className="w-full max-w-4xl h-auto object-contain" />
                 </div>
