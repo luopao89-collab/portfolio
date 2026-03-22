@@ -147,28 +147,18 @@ export default function ProjectDetail({ project, onClose, isOpen }: { project: P
                 project.details.results.map((img, idx) => (
                   <div 
                     key={idx} 
-                    className="rounded-[24px] overflow-hidden bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 flex justify-center group hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 cursor-pointer relative"
+                    className="rounded-[24px] overflow-hidden bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 flex justify-center transition-all duration-500 cursor-pointer relative"
                     onClick={() => setActiveImageIndex(idx)}
                   >
-                    <img src={img} alt={`Result ${idx + 1}`} className="w-full max-w-4xl h-auto object-contain transition-transform duration-700 ease-out" />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 flex items-center justify-center">
-                      <div className="bg-white/90 backdrop-blur-sm p-4 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-lg">
-                        <ZoomIn className="w-6 h-6 text-gray-800" />
-                      </div>
-                    </div>
+                    <img src={img} alt={`Result ${idx + 1}`} className="w-full max-w-4xl h-auto object-contain" />
                   </div>
                 ))
               ) : (
                 <div 
-                  className="rounded-[24px] overflow-hidden bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 flex justify-center group hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 cursor-pointer relative"
+                  className="rounded-[24px] overflow-hidden bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 flex justify-center transition-all duration-500 cursor-pointer relative"
                   onClick={() => setActiveImageIndex(0)}
                 >
-                  <img src={project.image} alt="Result" className="w-full max-w-4xl h-auto object-contain transition-transform duration-700 ease-out" />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 flex items-center justify-center">
-                    <div className="bg-white/90 backdrop-blur-sm p-4 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-lg">
-                      <ZoomIn className="w-6 h-6 text-gray-800" />
-                    </div>
-                  </div>
+                  <img src={project.image} alt="Result" className="w-full max-w-4xl h-auto object-contain" />
                 </div>
               )}
             </div>
