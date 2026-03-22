@@ -219,8 +219,8 @@ export default function App() {
       <nav className="fixed top-0 left-0 right-0 z-40 bg-[#050505]/80 backdrop-blur-md border-b border-white/5">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="text-3xl font-black tracking-tighter flex items-center gap-1">
-            <span className="text-white">京</span>
-            <span className="text-[#ff2e55]">京</span>
+            <span className="text-white">JING</span>
+            <span className="text-[#ff2e55]">JING</span>
           </div>
           
           <div className="hidden md:flex items-center gap-10 text-sm font-medium">
@@ -242,10 +242,10 @@ export default function App() {
 
           <h1 className={`stagger-item ${isAppLoading ? 'stagger-hidden' : 'stagger-visible'} text-[12vw] md:text-[150px] font-black leading-[0.85] tracking-tighter mb-12 uppercase flex flex-col items-center`} style={{ transitionDelay: '400ms' }}>
             <ScrollSweepRevealText className="block" textClassName="flex flex-col items-center">
-              <span className="text-white">黄</span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-b from-gray-400 to-gray-600">晶晶</span>
+              <span className="text-white">HUANG</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-b from-gray-400 to-gray-600">JINGJING</span>
             </ScrollSweepRevealText>
-            <span className="block text-4xl md:text-6xl mt-6 text-[#ff2e55] tracking-widest">产品与体验</span>
+            <span className="block text-4xl md:text-6xl mt-6 text-[#ff2e55] tracking-widest">PRODUCT & EXPERIENCE</span>
           </h1>
           
           <p className={`stagger-item ${isAppLoading ? 'stagger-hidden' : 'stagger-visible'} max-w-4xl text-lg md:text-xl text-gray-400 leading-relaxed mb-16 font-light`} style={{ transitionDelay: '600ms' }}>
