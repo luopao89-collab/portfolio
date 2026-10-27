@@ -9,6 +9,7 @@ import { ArrowUpRight, ArrowUp, Download, Star, Mail, Phone } from 'lucide-react
 import { projects, Project, transitionData } from './data';
 import Resume from './components/Resume';
 import ProjectDetail from './components/ProjectDetail';
+import ChromaGrid from './components/ChromaGrid';
 import { ScrollSweepRevealText } from './components/ScrollSweepRevealText';
 
 const CompanyProjectBlock = ({ group, index, onSelectProject }: { group: { category: string; company: string; projects: Project[] }, index: number, onSelectProject: (p: Project) => void }) => {
@@ -545,17 +546,20 @@ export default function App() {
               </div>
             </div>
 
-            {/* Portfolio List Grouped by Company */}
-            <div className="flex flex-col gap-y-32">
-              {groupedProjects.map((group, index) => (
-                <CompanyProjectBlock 
-                  key={group.category} 
-                  group={group} 
-                  index={index} 
-                  onSelectProject={handleSelectProject} 
-                />
-              ))}
-            </div>
+            {/* Interactive portfolio: existing projects and detail drawer, React Bits JS-CSS visuals */}
+            <ChromaGrid
+              items={filteredProjects.map((p, index) => ({
+                image: p.image,
+                title: p.title,
+                subtitle: p.category,
+                accent: ['#ff2e55', '#3fb8ff', '#ffd23f', '#b5e16e'][index % 4]
+              }))}
+              columns={2}
+              minCardWidth={220}
+              radius={340}
+              aspectRatio="16 / 10"
+              onItemClick={(_, index) => handleSelectProject(filteredProjects[index])}
+            />
           </div>
         </section>
 
