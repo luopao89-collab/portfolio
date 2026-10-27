@@ -93,6 +93,7 @@ const falloffStops = softness => {
 
 export const ChromaGrid = ({
   items,
+  onItemClick,
   columns = 3,
   minCardWidth = 180,
   gap = 12,
@@ -267,6 +268,17 @@ export const ChromaGrid = ({
             >
               {body}
             </a>
+          ) : onItemClick ? (
+            <button
+              key={key}
+              type="button"
+              className="chroma-card"
+              data-chroma-area=""
+              style={{ ...cardStyle, cursor: 'pointer', textAlign: 'left', font: 'inherit' }}
+              onClick={() => onItemClick(item, index)}
+            >
+              {body}
+            </button>
           ) : (
             <article key={key} className="chroma-card" data-chroma-area="" style={cardStyle}>
               {body}
